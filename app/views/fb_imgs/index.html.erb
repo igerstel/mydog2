@@ -1,0 +1,31 @@
+<h1>Listing fb_imgs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filename</th>
+      <th>Ext</th>
+      <th>Imgur</th>
+      <th>Processed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fb_imgs.each do |fb_img| %>
+      <tr>
+        <td><%= fb_img.filename %></td>
+        <td><%= fb_img.ext %></td>
+        <td><%= fb_img.imgur_id %></td>
+        <td><%= fb_img.processed %></td>
+        <td><%= link_to 'Show', fb_img %></td>
+        <td><%= link_to 'Edit', edit_fb_img_path(fb_img) %></td>
+        <td><%= link_to 'Destroy', fb_img, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fb img', new_fb_img_path %>

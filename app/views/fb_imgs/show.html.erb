@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @fb_img.filename %>
+</p>
+
+<p>
+  <strong>Ext:</strong>
+  <%= @fb_img.ext %>
+</p>
+
+<p>
+  <strong>Imgur:</strong>
+  <%= @fb_img.imgur_id %>
+</p>
+
+<p>
+  <strong>Processed:</strong>
+  <%= @fb_img.processed %>
+</p>
+
+<%= link_to 'Edit', edit_fb_img_path(@fb_img) %> |
+<%= link_to 'Back', fb_imgs_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reddit.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @reddit.url %>
+</p>
+
+<p>
+  <strong>Imgur:</strong>
+  <%= @reddit.imgur_id %>
+</p>
+
+<%= link_to 'Edit', edit_reddit_path(@reddit) %> |
+<%= link_to 'Back', reddits_path %>

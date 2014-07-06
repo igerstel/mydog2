@@ -1,0 +1,33 @@
+<%= form_for(@fb_img) do |f| %>
+  <% if @fb_img.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fb_img.errors.count, "error") %> prohibited this fb_img from being saved:</h2>
+
+      <ul>
+      <% @fb_img.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :filename %><br>
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :ext %><br>
+    <%= f.text_field :ext %>
+  </div>
+  <div class="field">
+    <%= f.label :imgur_id %><br>
+    <%= f.number_field :imgur_id %>
+  </div>
+  <div class="field">
+    <%= f.label :processed %><br>
+    <%= f.check_box :processed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

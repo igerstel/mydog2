@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @imgur.filename %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @imgur.url %>
+</p>
+
+<p>
+  <strong>Processed:</strong>
+  <%= @imgur.processed %>
+</p>
+
+<%= link_to 'Edit', edit_imgur_path(@imgur) %> |
+<%= link_to 'Back', imgurs_path %>

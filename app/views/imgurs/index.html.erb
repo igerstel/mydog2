@@ -1,0 +1,29 @@
+<h1>Listing imgurs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filename</th>
+      <th>Url</th>
+      <th>Processed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @imgurs.each do |imgur| %>
+      <tr>
+        <td><%= imgur.filename %></td>
+        <td><%= imgur.url %></td>
+        <td><%= imgur.processed %></td>
+        <td><%= link_to 'Show', imgur %></td>
+        <td><%= link_to 'Edit', edit_imgur_path(imgur) %></td>
+        <td><%= link_to 'Destroy', imgur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Imgur', new_imgur_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@imgur) do |f| %>
+  <% if @imgur.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@imgur.errors.count, "error") %> prohibited this imgur from being saved:</h2>
+
+      <ul>
+      <% @imgur.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :filename %><br>
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :processed %><br>
+    <%= f.check_box :processed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

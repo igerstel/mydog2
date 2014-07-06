@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filename: MyString
+  ext: MyString
+  imgur_id: 1
+  processed: false
+
+two:
+  filename: MyString
+  ext: MyString
+  imgur_id: 1
+  processed: false
